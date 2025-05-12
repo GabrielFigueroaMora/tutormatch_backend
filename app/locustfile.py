@@ -98,7 +98,6 @@ class FullBookingFlow(HttpUser):
 
         self.behavior.logout_user(self.client, student_token)
 
-
 # This class delegates to FullBookingFlow's task
 class WebsiteUser(FullBookingFlow):
     tasks = [FullBookingFlow.tutor_student_booking_flow]
